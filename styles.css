@@ -3,6 +3,10 @@
     max-width: 100%; /* Garantir que a logo seja responsiva */
     height: auto;
 }
+
+#menino {
+  padding-top: 120px;
+}
 header {
     z-index: 1000; /* O navbar ficará acima de outros elementos */
     position: fixed; /* Fixando o navbar no topo da página */
@@ -15,6 +19,7 @@ header:hover {
 
 #precos {
     padding-top: 125px; /* Ajuste a altura para a altura da sua navbar */
+    padding-bottom: 125px;
 }
 .card {
     height: 70vh; /* Faz o card ocupar a altura da tela */
@@ -36,6 +41,12 @@ header:hover {
 
   .carousel-inner img {
     width: 100%; /* A largura das imagens se ajusta ao container */
-    height: 100vh; /* Ajuste a altura desejada (ex: 60% da altura da viewport) */
+    height: 83vh; /* Ajuste a altura desejada (ex: 60% da altura da viewport) */
     object-fit: cover; /* Faz com que as imagens cubram o espaço sem distorção */
+}
+
+#higiene {
+  width:100%;
+  object-fit: cover;
+  object-position: 50% 30%;
 }
