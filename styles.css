@@ -4,12 +4,20 @@
     height: auto;
 }
 header {
-    position: sticky;
-    top: 0;
+    z-index: 1000; /* O navbar ficará acima de outros elementos */
+    position: fixed; /* Fixando o navbar no topo da página */
+    width: 100%; /* Garantindo que ocupe toda a largura */
 }
-/* Card */
+
+header:hover {
+    opacity: 1; /* Opacidade total ao passar o mouse */
+}
+
+#precos {
+    padding-top: 125px; /* Ajuste a altura para a altura da sua navbar */
+}
 .card {
-    height: 79vh; /* Faz o card ocupar a altura da tela */
+    height: 70vh; /* Faz o card ocupar a altura da tela */
     border-radius: 15px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
     overflow: hidden; /* Impede que o conteúdo ultrapasse o card */
@@ -25,3 +33,9 @@ header {
     max-height: 40vh; /* Limita a altura da imagem */
     object-fit: cover; /* Ajusta a imagem ao espaço */
   }
+
+  .carousel-inner img {
+    width: 100%; /* A largura das imagens se ajusta ao container */
+    height: 100vh; /* Ajuste a altura desejada (ex: 60% da altura da viewport) */
+    object-fit: cover; /* Faz com que as imagens cubram o espaço sem distorção */
+}
