@@ -1,0 +1,27 @@
+.Logo {
+    width: 110px; /* Largura da logo */
+    max-width: 100%; /* Garantir que a logo seja responsiva */
+    height: auto;
+}
+header {
+    position: sticky;
+    top: 0;
+}
+/* Card */
+.card {
+    height: 79vh; /* Faz o card ocupar a altura da tela */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse o card */
+    transition: transform 0.3s ease; /* Para animação de hover */
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+  }
+
+  img.card-img-top, img.card-img-bottom {
+    height: auto;
+    max-height: 40vh; /* Limita a altura da imagem */
+    object-fit: cover; /* Ajusta a imagem ao espaço */
+  }
