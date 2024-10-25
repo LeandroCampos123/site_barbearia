@@ -3,24 +3,54 @@
     max-width: 100%; /* Garantir que a logo seja responsiva */
     height: auto;
 }
+#Logao {
+  padding-top: 190px;
+  width: 100%;
 
-#menino {
-  padding-top: 120px;
 }
+
 header {
     z-index: 1000; /* O navbar ficará acima de outros elementos */
     position: fixed; /* Fixando o navbar no topo da página */
     width: 100%; /* Garantindo que ocupe toda a largura */
 }
 
-header:hover {
-    opacity: 1; /* Opacidade total ao passar o mouse */
+#Home {
+  position: relative;
+  padding: 40px 0;
+  overflow: hidden; /* Garante que o fundo não ultrapasse a área */
+}
+
+#Home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('BG2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scaleX(-1); /* Inverte apenas o fundo */
+  z-index: -1; /* Garante que o fundo fique atrás do conteúdo */
+  opacity: 0.7; /* Reduz um pouco a opacidade para maior contraste */
+}
+#Textos-grid{
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+#Textos-grid .col-md-12{
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 #precos {
     padding-top: 125px; /* Ajuste a altura para a altura da sua navbar */
     padding-bottom: 125px;
 }
+
 .card {
     height: 70vh; /* Faz o card ocupar a altura da tela */
     border-radius: 15px; /* Bordas arredondadas */
@@ -30,7 +60,7 @@ header:hover {
   }
 
   .card:hover {
-    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+    transform: scale(1.03); /* Aumenta levemente ao passar o mouse */
   }
 
   img.card-img-top, img.card-img-bottom {
@@ -50,3 +80,4 @@ header:hover {
   object-fit: cover;
   object-position: 50% 30%;
 }
+
