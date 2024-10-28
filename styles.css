@@ -1,6 +1,5 @@
 .Logo {
-    width: 110px; /* Largura da logo */
-    max-width: 100%; /* Garantir que a logo seja responsiva */
+    width: 110px;
     height: auto;
 }
 #Logao {
@@ -10,15 +9,14 @@
 }
 
 header {
-    z-index: 1000; /* O navbar ficará acima de outros elementos */
-    position: fixed; /* Fixando o navbar no topo da página */
-    width: 100%; /* Garantindo que ocupe toda a largura */
+    z-index: 1000; 
+    position: fixed;
+    width: 100%;
 }
 
 #Home {
   position: relative;
   padding: 40px 0;
-  overflow: hidden; /* Garante que o fundo não ultrapasse a área */
 }
 
 #Home::before {
@@ -32,13 +30,34 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transform: scaleX(-1); /* Inverte apenas o fundo */
-  z-index: -1; /* Garante que o fundo fique atrás do conteúdo */
-  opacity: 0.7; /* Reduz um pouco a opacidade para maior contraste */
+  transform: scaleX(-1); 
+  z-index: -1; 
+  opacity: 0.7;
 }
+
 #Textos-grid{
   padding-top: 200px;
   padding-bottom: 200px;
+}
+
+@media (max-width: 992px) {
+  #Logao {
+    padding-top: 250px;
+  }
+}
+@media (max-width: 768px){
+  #Textos-grid h1 {
+    font-size: 1.5rem; 
+    text-align: center; 
+  }
+
+  #Textos-grid p {
+    font-size: 0.9rem; 
+    text-align: center; 
+  }
+  #Logao{
+    display: none;
+  }
 }
 
 #Textos-grid .col-md-12{
@@ -47,32 +66,64 @@ header {
 }
 
 #valores {
-    padding-top: 125px; /* Ajuste a altura para a altura da sua navbar */
+    padding-top: 125px; 
     padding-bottom: 125px;
 }
 
 .card {
-    height: 70vh; /* Faz o card ocupar a altura da tela */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    overflow: hidden; /* Impede que o conteúdo ultrapasse o card */
-    transition: transform 0.3s ease; /* Para animação de hover */
+    height: 70vh; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
   }
 
   .card:hover {
-    transform: scale(1.03); /* Aumenta levemente ao passar o mouse */
+    transform: scale(1.03); 
   }
 
   img.card-img-top, img.card-img-bottom {
     height: auto;
-    max-height: 40vh; /* Limita a altura da imagem */
-    object-fit: cover; /* Ajusta a imagem ao espaço */
+    max-height: 40vh;
+    object-fit: cover;
   }
 
-  .carousel-inner img {
-    width: 100%; /* A largura das imagens se ajusta ao container */
-    height: 83vh; /* Ajuste a altura desejada (ex: 60% da altura da viewport) */
-    object-fit: cover; /* Faz com que as imagens cubram o espaço sem distorção */
+@media (max-width: 992px) {
+  .card {
+    height: 40vh; 
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    height: 50vh; 
+    margin-bottom: 20px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .card{
+    height: 43vh;
+  }
+  .card .card-title {
+    font-size: 1.5rem; 
+  }
+
+  .card .card-text {
+    font-size: 1.5rem; 
+  }
+  .card .btn {
+    padding: 6px 12px; 
+    font-size: 0.9rem; 
+  }
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 83vh;
+    object-fit: cover;
 }
 
 #higiene {
